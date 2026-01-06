@@ -6,96 +6,705 @@
   <title>Brian Kendall Alexander</title>
 
   <meta name="description" content="Brian Kendall Alexander — Business & Legal Affairs, Film & Television" />
+  <meta name="theme-color" content="#0b0b0c" />
+
+  <!-- Open Graph (nice previews when you text/email the link) -->
+  <meta property="og:title" content="Brian Kendall Alexander" />
+  <meta property="og:description" content="Business & Legal Affairs · Film & Television" />
+  <meta property="og:type" content="website" />
 
   <style>
-    :root {
+    :root{
+      --bg: #ffffff;
+      --panel: rgba(255,255,255,0.7);
       --text: #0b0b0c;
       --muted: rgba(11,11,12,0.65);
       --line: rgba(11,11,12,0.12);
+      --shadow: 0 18px 60px rgba(0,0,0,0.08);
+      --shadow2: 0 10px 28px rgba(0,0,0,0.08);
+      --radius: 22px;
+      --radius2: 16px;
+      --max: 980px;
     }
 
-    body {
-      margin: 0;
-      background: #fff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Roboto, Helvetica, Arial, sans-serif;
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body{
+      margin:0;
+      background:
+        radial-gradient(1200px 700px at 10% -10%, rgba(0,0,0,0.06), transparent 55%),
+        radial-gradient(900px 600px at 90% 0%, rgba(0,0,0,0.05), transparent 55%),
+        radial-gradient(1000px 800px at 50% 120%, rgba(0,0,0,0.04), transparent 50%),
+        var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: var(--text);
+      line-height: 1.35;
     }
 
-    .container {
-      max-width: 760px;
+    a { color: inherit; }
+
+    /* Layout */
+    .container{
+      max-width: var(--max);
       margin: 0 auto;
-      padding: 72px 22px;
+      padding: 18px 22px 80px;
     }
 
-    h1 {
-      font-size: 40px;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin: 0 0 12px;
+    /* Top nav */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: rgba(255,255,255,0.65);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
     }
 
-    .subtitle {
+    .topbar-inner{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 12px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      text-decoration: none;
+      min-width: 200px;
+    }
+
+    .mark{
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: linear-gradient(145deg, rgba(0,0,0,0.10), rgba(0,0,0,0.02));
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .brand-text{
+      display:flex;
+      flex-direction:column;
+      line-height: 1.1;
+    }
+
+    .brand-text strong{
+      font-size: 13px;
+      letter-spacing: -0.01em;
+      font-weight: 650;
+    }
+    .brand-text span{
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    nav{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a{
+      text-decoration:none;
+      font-size: 13px;
+      color: rgba(11,11,12,0.78);
+      border: 1px solid rgba(0,0,0,0.08);
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.55);
+      transition: transform .12s ease, background .12s ease;
+    }
+    nav a:hover{
+      background: rgba(0,0,0,0.04);
+      transform: translateY(-1px);
+    }
+
+    /* Hero */
+    header.hero{
+      padding: 58px 0 22px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .brand{ min-width: unset; }
+    }
+
+    .hero-card{
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.65);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-card:before{
+      content:"";
+      position:absolute;
+      inset:-1px;
+      background:
+        radial-gradient(800px 300px at 10% 0%, rgba(0,0,0,0.08), transparent 55%),
+        radial-gradient(700px 250px at 95% 10%, rgba(0,0,0,0.06), transparent 55%);
+      opacity: 0.55;
+      pointer-events:none;
+      mask: linear-gradient(to bottom, rgba(0,0,0,0.55), transparent 70%);
+    }
+
+    h1{
+      position: relative;
+      margin: 0 0 10px;
+      font-size: 44px;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+    }
+
+    .subtitle{
+      position: relative;
       font-size: 18px;
       color: var(--muted);
-      margin-bottom: 28px;
+      margin: 0 0 18px;
+      max-width: 56ch;
     }
 
-    .links {
-      display: flex;
-      gap: 14px;
-      margin-bottom: 36px;
+    .cta-row{
+      position: relative;
+      display:flex;
       flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+      align-items: center;
     }
 
-    .links a {
+    .btn{
+      appearance: none;
+      border: 1px solid rgba(0,0,0,0.10);
+      background: rgba(255,255,255,0.70);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 14px;
       text-decoration: none;
-      border: 1px solid var(--line);
-      padding: 10px 16px;
-      border-radius: 14px;
-      color: inherit;
-      font-size: 15px;
-      transition: all .15s ease;
+      cursor: pointer;
+      transition: transform .12s ease, background .12s ease, box-shadow .12s ease;
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
     }
-
-    .links a:hover {
+    .btn:hover{
       background: rgba(0,0,0,0.04);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow2);
     }
 
-    .signature {
-      border-top: 1px solid var(--line);
-      padding-top: 28px;
-      margin-top: 28px;
+    .btn.primary{
+      background: rgba(11,11,12,0.92);
+      color: #fff;
+      border-color: rgba(11,11,12,0.92);
+    }
+    .btn.primary:hover{
+      background: rgba(11,11,12,0.86);
     }
 
-    .signature img {
-      max-width: 520px;
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    footer {
-      margin-top: 40px;
+    .small-note{
+      position: relative;
+      margin-top: 12px;
       font-size: 13px;
       color: var(--muted);
+    }
+
+    /* Right column stat/cred panel */
+    .cred{
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.60);
+      box-shadow: var(--shadow2);
+      padding: 20px;
+    }
+
+    .cred h2{
+      margin: 0 0 10px;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(11,11,12,0.68);
+    }
+
+    .pillrow{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .pill{
+      font-size: 13px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.08);
+      background: rgba(255,255,255,0.70);
+      color: rgba(11,11,12,0.78);
+      white-space: nowrap;
+    }
+
+    /* Sections */
+    section{
+      margin-top: 22px;
+      scroll-margin-top: 92px;
+    }
+
+    .section-card{
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.70);
+      box-shadow: var(--shadow2);
+      padding: 26px;
+    }
+
+    .kicker{
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(11,11,12,0.62);
+      margin: 0 0 10px;
+    }
+
+    h3{
+      margin: 0 0 12px;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+    }
+
+    p{
+      margin: 0 0 10px;
+      color: rgba(11,11,12,0.85);
+      max-width: 78ch;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 900px){
+      .grid-3{ grid-template-columns: 1fr; }
+    }
+
+    .tile{
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,0.75);
+      padding: 16px;
+      min-height: 120px;
+    }
+    .tile strong{
+      display:block;
+      font-size: 15px;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .tile span{
+      display:block;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (max-width: 900px){
+      .split{ grid-template-columns: 1fr; }
+    }
+
+    ul.clean{
+      margin: 0;
+      padding-left: 18px;
+      color: rgba(11,11,12,0.85);
+    }
+    ul.clean li{
+      margin: 8px 0;
+    }
+
+    .highlights{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .chip{
+      font-size: 13px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.10);
+      background: rgba(0,0,0,0.03);
+      color: rgba(11,11,12,0.80);
+    }
+
+    /* Credits list */
+    .credits{
+      margin-top: 10px;
+      padding-left: 18px;
+      color: rgba(11,11,12,0.88);
+    }
+    .credits li{
+      margin: 10px 0;
+    }
+    .credits em{
+      color: var(--muted);
+      font-style: normal;
+      font-size: 13px;
+      margin-left: 6px;
+    }
+
+    /* Contact */
+    .contact-row{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .toast{
+      position: fixed;
+      left: 50%;
+      bottom: 26px;
+      transform: translateX(-50%);
+      background: rgba(11,11,12,0.92);
+      color: #fff;
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-size: 13px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .18s ease, transform .18s ease;
+    }
+    .toast.show{
+      opacity: 1;
+      transform: translateX(-50%) translateY(-4px);
+    }
+
+    footer{
+      margin-top: 26px;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+      padding-top: 18px;
+    }
+
+    /* Subtle entrance animation */
+    .reveal{
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .35s ease, transform .35s ease;
+    }
+    .reveal.visible{
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html { scroll-behavior: auto; }
+      .btn, nav a { transition: none; }
+      .reveal{ opacity: 1; transform: none; }
     }
   </style>
 </head>
 
 <body>
-  <main class="container">
-    <h1>Brian Kendall Alexander</h1>
-    <div class="subtitle">Business & Legal Affairs · Film & Television</div>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <div class="mark" aria-hidden="true"></div>
+        <div class="brand-text">
+          <strong>Brian Kendall Alexander</strong>
+          <span>Business & Legal Affairs · Film & Television</span>
+        </div>
+      </a>
 
-    <div class="links">
-      <a href="mailto:basquared@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/briankendallalexander/">LinkedIn</a>
+      <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#focus">Focus</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#credits">Credits</a>
+        <a href="#experience">Experience</a>
+        <a href="#approach">How I work</a>
+        <a href="#contact">Contact</a>
+        <a href="Brian_Kendall_Alexander_Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+      </nav>
     </div>
+  </div>
+
+  <main id="top" class="container">
+    <header class="hero">
+      <div class="hero-grid">
+        <div class="hero-card reveal">
+          <h1>Brian Kendall Alexander</h1>
+          <div class="subtitle">
+            Business & Legal Affairs executive advising studios, networks, and production companies on film & TV deals,
+            rights, production legal, and distribution — with a practical, production-informed perspective.
+          </div>
+
+          <div class="cta-row">
+            <a class="btn primary" href="mailto:basquared@gmail.com">Email</a>
+            <a class="btn" href="https://www.linkedin.com/in/briankendallalexander/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="Brian_Kendall_Alexander_Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+            <button class="btn" type="button" id="copyEmail" aria-label="Copy email to clipboard">Copy email</button>
+          </div>
+
+          <div class="small-note">
+            Based in Los Angeles · Open to studio/network, production, and media content-adjacent roles and collaborations.
+          </div>
+        </div>
+
+        <aside class="cred reveal" aria-label="At-a-glance">
+          <h2>At a glance</h2>
+          <div class="pillrow">
+            <div class="pill">Dealmaking & drafting</div>
+            <div class="pill">Rights & clearances</div>
+            <div class="pill">Production legal</div>
+            <div class="pill">Docu & unscripted</div>
+            <div class="pill">Cross-functional experience</div>
+          </div>
+
+          <div style="margin-top:14px; font-size:14px; color:rgba(11,11,12,0.80);">
+            <strong style="display:block; margin-bottom:6px;">Quick note</strong>
+            <span style="color: var(--muted);">
+              I keep negotiations calm and focused on the key business points — so teams can move forward quickly, with
+              terms that are workable in the real world.
+            </span>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="reveal">
+      <div class="section-card">
+        <div class="kicker">About</div>
+        <h3>Practical counsel, creative-friendly execution.</h3>
+        <p>
+          I partner with creative, production, and business teams to structure and close deals that are clear,
+          durable, and executable — from first conversations through signatures and delivery.
+        </p>
+        <p>
+          My background spans production companies, networks/distributors, and studios/funders, which helps me anticipate
+          friction points early and keep negotiations moving without losing what matters.
+        </p>
+      </div>
+    </section>
+
+    <!-- FOCUS -->
+    <section id="focus" class="reveal">
+      <div class="section-card">
+        <div class="kicker">Focus</div>
+        <h3>What I’m often brought in to handle</h3>
+
+        <div class="grid-3" role="list">
+          <div class="tile" role="listitem">
+            <strong>Film & TV dealmaking</strong>
+            <span>Development, acquisition, production, distribution, co-financing, and strategic partnerships.</span>
+          </div>
+          <div class="tile" role="listitem">
+            <strong>Rights, clearances & risk</strong>
+            <span>Chain of title, underlying rights, music, archival, releases, E&O readiness, and practical risk calls.</span>
+          </div>
+          <div class="tile" role="listitem">
+            <strong>Production legal</strong>
+            <span>Hands-on support during prep/production/post; issue-spotting that respects schedules and budgets.</span>
+          </div>
+          <div class="tile" role="listitem">
+            <strong>Talent & producer agreements</strong>
+            <span>Writers, directors, producers, on-camera, voice, estates, and bespoke participation structures.</span>
+          </div>
+          <div class="tile" role="listitem">
+            <strong>Docs & unscripted expertise</strong>
+            <span>Real-world experience with complex stakeholder sets and clearance-heavy storytelling.</span>
+          </div>
+          <div class="tile" role="listitem">
+            <strong>Internal leadership</strong>
+            <span>Cross-functional alignment, scalable templates, and process improvements that reduce cycle time.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section id="highlights" class="reveal">
+      <div class="section-card">
+        <div class="kicker">Selected highlights</div>
+        <h3>Representative work (high-level)</h3>
+
+        <p style="color: var(--muted);">
+          These are intentionally broad — happy to share specifics in conversation where appropriate.
+        </p>
+
+        <div class="highlights" aria-label="Highlights list">
+          <span class="chip">Negotiated high-value film & series packages</span>
+          <span class="chip">Closed multi-party stakeholder deals</span>
+          <span class="chip">Structured rights + clearance frameworks</span>
+          <span class="chip">Supported productions end-to-end (prep → delivery)</span>
+          <span class="chip">Advised senior leadership on risk + strategy</span>
+          <span class="chip">Built templates/process that scaled output</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDITS -->
+    <section id="credits" class="reveal">
+      <div class="section-card">
+        <div class="kicker">Selected credits</div>
+        <h3>Titles (selected)</h3>
+
+        <ul class="credits" aria-label="Selected credits (titles only)">
+          <li><strong>The Bee Gees: How Can You Mend a Broken Heart</strong></li>
+          <li><strong>Zoey’s Extraordinary Playlist</strong></li>
+          <li><strong>High in the Clouds</strong></li>
+          <li><strong>The Beastie Boys Story</strong></li>
+        </ul>
+
+        <p style="margin-top:12px; color: var(--muted); font-size: 13px;">
+          Titles shown for identification only.
+        </p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="reveal">
+      <div class="section-card">
+        <div class="kicker">Experience snapshot</div>
+        <h3>Perspective across the full ecosystem</h3>
+
+        <div class="split">
+          <div>
+            <strong style="display:block; margin-bottom:8px;">Where I’ve operated</strong>
+            <ul class="clean">
+              <li>Studios / funders / investors</li>
+              <li>Networks & distributors</li>
+              <li>Production companies (hands-on production legal)</li>
+              <li>Music + IP adjacency (where it supports the project)</li>
+            </ul>
+          </div>
+
+          <div>
+            <strong style="display:block; margin-bottom:8px;">What teams get from me</strong>
+            <ul class="clean">
+              <li>Clear drafting and calm negotiations</li>
+              <li>Fast issue-spotting (without over-lawyering)</li>
+              <li>Commercial creativity in structuring</li>
+              <li>Reliable follow-through and clean closes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section id="approach" class="reveal">
+      <div class="section-card">
+        <div class="kicker">How I work</div>
+        <h3>Low drama. High clarity. Forward motion.</h3>
+        <p>
+          I aim to be the person who makes it easier for creative and business teams to say “yes” —
+          with terms that are aligned, defensible, and workable in the real world.
+        </p>
+        <p>
+          I’m direct, collaborative, and disciplined about getting to the key business points early,
+          so negotiations don’t drift into endless paper.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="reveal">
+      <div class="section-card">
+        <div class="kicker">Contact</div>
+        <h3>Best way to reach me</h3>
+        <p>
+          Email is easiest. If you prefer LinkedIn, that works too.
+        </p>
+
+        <div class="contact-row">
+          <a class="btn primary" href="mailto:basquared@gmail.com">basquared@gmail.com</a>
+          <button class="btn" type="button" id="copyEmail2">Copy email</button>
+          <a class="btn" href="https://www.linkedin.com/in/briankendallalexander/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+          <a class="btn" href="Brian_Kendall_Alexander_Resume.pdf" target="_blank" rel="noopener">Download résumé (PDF)</a>
+        </div>
+
+        <p style="margin-top:12px; color: var(--muted); font-size: 13px;">
+        </p>
+      </div>
+    </section>
 
     <footer>
-      © <script>document.write(new Date().getFullYear())</script> Brian Kendall Alexander
+      © <span id="year"></span> Brian Kendall Alexander
     </footer>
   </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll (subtle)
+    const revealEls = Array.from(document.querySelectorAll('.reveal'));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+
+    // Copy email + toast
+    const EMAIL = "basquared@gmail.com";
+    const toast = document.getElementById('toast');
+
+    function showToast(msg){
+      toast.textContent = msg;
+      toast.classList.add('show');
+      window.clearTimeout(showToast._t);
+      showToast._t = window.setTimeout(() => toast.classList.remove('show'), 1600);
+    }
+
+    async function copyEmail(){
+      try{
+        await navigator.clipboard.writeText(EMAIL);
+        showToast("Email copied");
+      }catch(e){
+        // Fallback
+        const ta = document.createElement('textarea');
+        ta.value = EMAIL;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+        showToast("Email copied");
+      }
+    }
+
+    document.getElementById('copyEmail').addEventListener('click', copyEmail);
+    document.getElementById('copyEmail2').addEventListener('click', copyEmail);
+  </script>
 </body>
 </html>
