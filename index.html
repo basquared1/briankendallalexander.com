@@ -514,7 +514,85 @@
         </aside>
       </div>
     </header>
-    
+    /* Accomplishments section */
+.section {
+  padding: 56px 0;
+}
+
+.container {
+  width: min(960px, 92vw);
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+}
+
+.section-lede {
+  font-size: clamp(16px, 1.6vw, 18px);
+  line-height: 1.6;
+  margin: 0 0 22px;
+  max-width: 72ch;
+}
+
+.section-body {
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 18px 0 0;
+  max-width: 72ch;
+}
+
+.section-accomplishments {
+  /* Keeps it feeling “hero related” without shouting */
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.accomplishments-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 18px 0 10px;
+}
+
+.metric {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 14px 14px 12px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+}
+
+.metric-value {
+  font-size: 22px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  margin-bottom: 6px;
+}
+
+.metric-label {
+  font-size: 13.5px;
+  line-height: 1.4;
+  opacity: 0.85;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .section {
+    padding: 42px 0;
+  }
+
+  .accomplishments-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-value {
+    font-size: 20px;
+  }
+}
     <!-- ABOUT -->
     <section id="about" class="reveal">
       <div class="section-card">
@@ -545,7 +623,34 @@
         </p>
       </div>
     </section>
-    
+    <section id="recent-accomplishments" class="section section-accomplishments">
+  <div class="container">
+    <h2 class="section-title">Recent Accomplishments at UMG</h2>
+
+    <p class="section-lede">
+      As Senior Vice President of Business &amp; Legal Affairs at UMG’s Polygram Entertainment, I led all film and television dealmaking for eight years, helping build the division into a meaningful player in premium documentary and music-driven content.
+    </p>
+
+    <div class="accomplishments-metrics" aria-label="Key deal metrics">
+      <div class="metric">
+        <div class="metric-value">$7M</div>
+        <div class="metric-label"><em>Selena y Los Dinos</em> to Netflix</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">$11M</div>
+        <div class="metric-label"><em>Man on the Run</em> to Amazon</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">$2M</div>
+        <div class="metric-label">Producing fee for Bob Marley docuseries for Netflix</div>
+      </div>
+    </div>
+
+    <p class="section-body">
+      Across back to back three year contracts, I structured and closed first look agreements, negotiated complex talent and distribution deals, and helped establish Polygram as a premium content partner to Netflix, Amazon, HBO, Apple, and others.
+    </p>
+  </div>
+</section>
     <!-- FOCUS -->
     <section id="focus" class="reveal">
       <div class="section-card">
