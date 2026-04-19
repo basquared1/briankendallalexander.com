@@ -1,0 +1,1713 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>Bliss Legal Studio | Entertainment Law &amp; Business Affairs · Los Angeles</title>
+  <meta name="description" content="Bliss Legal Studio is an entertainment law practice in Los Angeles advising talent, producers, production companies, studios, streamers, and creators on film, TV, and music rights transactions. Practical counsel. Creative-friendly execution." />
+  <meta name="keywords" content="entertainment lawyer Los Angeles, entertainment attorney, film production legal, music rights clearance, documentary legal counsel, talent agreements, streaming deals, TV transactions, creator economy legal" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bliss Legal Studio | Entertainment Law &amp; Business Affairs" />
+  <meta property="og:description" content="Practical counsel for talent, producers, studios, streamers, and the creator economy. Based in Los Angeles." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://briankendallalexander.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0a0a0b" />
+
+  <style>
+    /* ─── Variables ─── */
+    :root {
+      --bg: #fafaf9;
+      --surface: rgba(255,255,255,0.72);
+      --surface2: rgba(255,255,255,0.55);
+      --text: #0a0a0b;
+      --muted: rgba(10,10,11,0.58);
+      --muted2: rgba(10,10,11,0.40);
+      --line: rgba(10,10,11,0.10);
+      --accent: #0a0a0b;
+      --shadow-sm: 0 2px 10px rgba(0,0,0,0.06);
+      --shadow-md: 0 8px 32px rgba(0,0,0,0.08);
+      --shadow-lg: 0 18px 64px rgba(0,0,0,0.09);
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --radius-sm: 10px;
+      --max: 1020px;
+    }
+
+    /* ─── Reset ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background:
+        radial-gradient(1100px 600px at 5% -5%, rgba(0,0,0,0.055), transparent 55%),
+        radial-gradient(900px 500px at 95% 5%, rgba(0,0,0,0.04), transparent 55%),
+        radial-gradient(1000px 700px at 50% 110%, rgba(0,0,0,0.035), transparent 55%),
+        var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { font-family: inherit; cursor: pointer; }
+
+    /* ─── Layout ─── */
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ─── Navigation ─── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(250,250,249,0.80);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo-bubble {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: #f5f4f0;
+      border: 1px solid rgba(0,0,0,0.10);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      flex-shrink: 0;
+      overflow: hidden;
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-logo-bubble img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .nav-brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+    .nav-brand-text strong {
+      font-size: 14px;
+      font-weight: 650;
+      letter-spacing: -0.01em;
+    }
+    .nav-brand-text span {
+      font-size: 11.5px;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links a {
+      font-size: 13px;
+      color: var(--muted);
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: color .14s, background .14s, border-color .14s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover {
+      color: var(--text);
+      background: rgba(0,0,0,0.04);
+      border-color: var(--line);
+    }
+    .nav-links .nav-cta {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      font-weight: 550;
+    }
+    .nav-links .nav-cta:hover {
+      background: rgba(10,10,11,0.82);
+      border-color: rgba(10,10,11,0.82);
+      color: #fff;
+    }
+
+    /* ─── Buttons ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      transition: transform .14s, box-shadow .14s, background .14s;
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+      background: #fff;
+    }
+    .btn.primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .btn.primary:hover {
+      background: rgba(10,10,11,0.84);
+      border-color: rgba(10,10,11,0.84);
+    }
+    .btn.ghost {
+      background: transparent;
+      border-color: var(--line);
+    }
+    .btn.ghost:hover { background: rgba(0,0,0,0.04); }
+
+    /* ─── Cards ─── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      padding: 32px;
+    }
+    .card-sm {
+      background: var(--surface2);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 22px;
+    }
+
+    /* ─── Kicker / label ─── */
+    .kicker {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    /* ─── Section spacing ─── */
+    section { padding: 32px 0; }
+    .section-inner { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* ─── Reveal animation ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity .38s ease, transform .38s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .btn { transition: none; }
+    }
+
+    /* ════════════════════════════
+       HERO
+    ════════════════════════════ */
+    .hero { padding: 64px 0 40px; }
+    .hero-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 20px;
+      align-items: start;
+    }
+    @media (max-width: 820px) {
+      .hero-inner { grid-template-columns: 1fr; }
+    }
+    .hero-main {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-main::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(700px 280px at 0% 0%, rgba(0,0,0,0.065), transparent 55%),
+        radial-gradient(600px 250px at 100% 10%, rgba(0,0,0,0.045), transparent 55%);
+      pointer-events: none;
+      mask: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, transparent 70%);
+    }
+    .hero-eyebrow {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 550;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: rgba(0,0,0,0.04);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 14px 5px 5px;
+      margin-bottom: 20px;
+    }
+    .eyebrow-logo {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: #f5f4f0;
+      border: 1px solid rgba(0,0,0,0.09);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      overflow: hidden;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px;
+    }
+    .eyebrow-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    h1 {
+      position: relative;
+      font-size: clamp(34px, 5vw, 50px);
+      font-weight: 720;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .hero-sub {
+      position: relative;
+      font-size: 18px;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 52ch;
+      margin-bottom: 28px;
+    }
+    .hero-cta-row {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+    .hero-photo-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+    .hero-photo {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      object-fit: contain;
+      background: #f5f4f0;
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      flex-shrink: 0;
+      padding: 3px;
+    }
+    .hero-photo-text {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .hero-photo-text strong {
+      display: block;
+      color: var(--text);
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    /* Hero sidebar */
+    .hero-side {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .stat-card {
+      background: var(--surface2);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      padding: 20px;
+    }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .stat-num {
+      font-size: 26px;
+      font-weight: 720;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+    .stat-divider {
+      height: 1px;
+      background: var(--line);
+      margin: 12px 0;
+    }
+    .trust-note {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+
+    /* ════════════════════════════
+       TRUST BAR
+    ════════════════════════════ */
+    .trust-bar {
+      background: rgba(255,255,255,0.50);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+    }
+    .trust-bar-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      align-items: center;
+      justify-content: center;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .trust-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.25);
+      flex-shrink: 0;
+    }
+    .trust-sep { color: var(--muted2); font-size: 11px; }
+
+    /* ════════════════════════════
+       SERVICES
+    ════════════════════════════ */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+    @media (max-width: 820px) {
+      .services-grid { grid-template-columns: 1fr; }
+    }
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow .16s, transform .16s;
+    }
+    .service-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .service-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.05);
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      margin-bottom: 16px;
+      flex-shrink: 0;
+    }
+    .service-card h3 {
+      font-size: 17px;
+      font-weight: 650;
+      letter-spacing: -0.015em;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+    .service-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+      flex-grow: 1;
+      margin-bottom: 18px;
+    }
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: auto;
+    }
+    .tag {
+      font-size: 12px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,0.03);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    /* Full service detail cards */
+    .service-detail {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      padding: 34px;
+      margin-bottom: 18px;
+    }
+    .service-detail h3 {
+      font-size: 22px;
+      font-weight: 680;
+      letter-spacing: -0.025em;
+      margin-bottom: 8px;
+    }
+    .service-detail .ideal {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+    .service-detail p {
+      font-size: 15px;
+      color: rgba(10,10,11,0.80);
+      line-height: 1.7;
+      max-width: 72ch;
+      margin-bottom: 14px;
+    }
+    .detail-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 16px;
+    }
+    .detail-tag {
+      font-size: 13px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,0.03);
+      color: var(--muted);
+    }
+    .benefit-callout {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: var(--radius-sm);
+      background: rgba(0,0,0,0.035);
+      border-left: 3px solid rgba(0,0,0,0.18);
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .benefit-callout strong {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    /* ════════════════════════════
+       APPROACH
+    ════════════════════════════ */
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+    @media (max-width: 820px) {
+      .approach-grid { grid-template-columns: 1fr; }
+    }
+    .approach-tile {
+      background: var(--surface2);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 22px;
+    }
+    .approach-tile .num {
+      font-size: 28px;
+      font-weight: 720;
+      letter-spacing: -0.04em;
+      color: rgba(0,0,0,0.12);
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+    .approach-tile h4 {
+      font-size: 16px;
+      font-weight: 650;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+    .approach-tile p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ════════════════════════════
+       RESULTS
+    ════════════════════════════ */
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+    @media (max-width: 820px) {
+      .results-grid { grid-template-columns: 1fr; }
+    }
+    .result-card {
+      background: var(--surface2);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 22px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .result-card .deal-title {
+      font-size: 16px;
+      font-weight: 650;
+      letter-spacing: -0.01em;
+      font-style: italic;
+    }
+    .result-card .deal-meta {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .result-card .deal-highlight {
+      font-size: 13px;
+      background: rgba(0,0,0,0.04);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 10px;
+      align-self: flex-start;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .chip {
+      font-size: 13px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,0.03);
+      color: rgba(10,10,11,0.78);
+    }
+
+    /* ════════════════════════════
+       TESTIMONIALS
+    ════════════════════════════ */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+    @media (max-width: 820px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+    .testimonial-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .quote-mark {
+      font-size: 42px;
+      line-height: 0.8;
+      color: rgba(0,0,0,0.10);
+      font-family: Georgia, serif;
+      margin-bottom: 4px;
+    }
+    .testimonial-text {
+      font-size: 15px;
+      color: rgba(10,10,11,0.82);
+      line-height: 1.7;
+      flex-grow: 1;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+    .testimonial-author strong { font-size: 14px; font-weight: 650; }
+    .testimonial-author span { font-size: 12px; color: var(--muted); }
+
+    /* ════════════════════════════
+       FAQ
+    ════════════════════════════ */
+    .faq-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: var(--surface2);
+      overflow: hidden;
+      transition: box-shadow .14s;
+    }
+    .faq-item.open { box-shadow: var(--shadow-sm); }
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 18px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      font-size: 15px;
+      font-weight: 560;
+      color: var(--text);
+      cursor: pointer;
+    }
+    .faq-q:hover { background: rgba(0,0,0,0.02); }
+    .faq-arrow { font-size: 18px; color: var(--muted); transition: transform .2s; flex-shrink: 0; }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-a {
+      display: none;
+      padding: 0 22px 18px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 68ch;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ════════════════════════════
+       TEAM
+    ════════════════════════════ */
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    @media (max-width: 820px) {
+      .team-grid { grid-template-columns: 1fr; }
+    }
+    .team-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      padding: 32px;
+    }
+    .team-photo-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .team-photo {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(0,0,0,0.08);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+      flex-shrink: 0;
+    }
+    .team-photo-placeholder {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.05);
+      border: 2px dashed rgba(0,0,0,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+      color: var(--muted);
+    }
+    .team-name-block strong {
+      display: block;
+      font-size: 18px;
+      font-weight: 680;
+      letter-spacing: -0.015em;
+      margin-bottom: 3px;
+    }
+    .team-name-block span {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .team-card p {
+      font-size: 14px;
+      color: rgba(10,10,11,0.80);
+      line-height: 1.75;
+      margin-bottom: 12px;
+    }
+    .team-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+    .team-placeholder-note {
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+      background: rgba(0,0,0,0.03);
+      border: 1px dashed rgba(0,0,0,0.12);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      line-height: 1.6;
+    }
+
+    /* ════════════════════════════
+       ABOUT
+    ════════════════════════════ */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    @media (max-width: 820px) {
+      .about-grid { grid-template-columns: 1fr; }
+    }
+    .about-text h3 {
+      font-size: 26px;
+      font-weight: 680;
+      letter-spacing: -0.025em;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .about-text p {
+      font-size: 15px;
+      color: rgba(10,10,11,0.82);
+      line-height: 1.75;
+      margin-bottom: 14px;
+      max-width: 62ch;
+    }
+    .about-values {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .value-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--surface2);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+    }
+    .value-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(0,0,0,0.05);
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+    .value-row div strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 650;
+      margin-bottom: 2px;
+    }
+    .value-row div span {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ════════════════════════════
+       CONTACT / CTA
+    ════════════════════════════ */
+    .contact-card {
+      background: var(--accent);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(700px 400px at 20% 0%, rgba(255,255,255,0.08), transparent 55%),
+        radial-gradient(600px 350px at 80% 100%, rgba(255,255,255,0.05), transparent 55%);
+      pointer-events: none;
+    }
+    .contact-card h2 {
+      position: relative;
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 720;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 14px;
+      line-height: 1.15;
+    }
+    .contact-card p {
+      position: relative;
+      font-size: 16px;
+      color: rgba(255,255,255,0.68);
+      max-width: 48ch;
+      margin: 0 auto 28px;
+      line-height: 1.65;
+    }
+    .contact-btn-row {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-light {
+      background: #fff;
+      color: var(--accent);
+      border-color: rgba(255,255,255,0.9);
+      font-weight: 600;
+    }
+    .btn-light:hover { background: rgba(255,255,255,0.90); }
+    .btn-ghost-light {
+      background: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.88);
+      border-color: rgba(255,255,255,0.22);
+    }
+    .btn-ghost-light:hover {
+      background: rgba(255,255,255,0.20);
+      transform: translateY(-1px);
+    }
+
+    /* ════════════════════════════
+       FOOTER
+    ════════════════════════════ */
+    footer {
+      padding: 28px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted2);
+      border-top: 1px solid var(--line);
+    }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--text); }
+
+    /* ─── Toast ─── */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(10,10,11,0.92);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 13px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .18s, transform .18s;
+      z-index: 999;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-4px);
+    }
+
+    /* ─── Section header ─── */
+    .section-header { margin-bottom: 8px; }
+    .section-header h2 {
+      font-size: clamp(24px, 3.5vw, 32px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .section-header p {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 56ch;
+      line-height: 1.65;
+    }
+
+    /* ─── Utilities ─── */
+    .mt-8  { margin-top: 8px; }
+    .mt-12 { margin-top: 12px; }
+    .mt-16 { margin-top: 16px; }
+    .mt-20 { margin-top: 20px; }
+    .text-muted { color: var(--muted); }
+    .text-sm { font-size: 13px; }
+    .divider { height: 1px; background: var(--line); margin: 16px 0; }
+
+    @media (max-width: 640px) {
+      .card, .hero-main, .contact-card { padding: 24px; }
+      .service-detail, .team-card { padding: 24px; }
+      .contact-card { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav class="nav" role="navigation" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand" aria-label="Back to top">
+      <div class="nav-logo-bubble">
+        <img src="bliss-logo.png" alt="Bliss Legal Studio" />
+      </div>
+      <div class="nav-brand-text">
+        <strong>Bliss Legal Studio</strong>
+        <span>Entertainment Law &amp; Business Affairs</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#results">Results</a>
+      <a href="#team">Our Team</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="nav-cta">Get in Touch</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<div id="top"></div>
+<section class="hero">
+  <div class="hero-inner">
+
+    <div class="hero-main reveal">
+      <div class="hero-eyebrow">
+        <div class="eyebrow-logo">
+          <img src="bliss-logo.png" alt="" aria-hidden="true" />
+        </div>
+        Entertainment Law &middot; Los Angeles
+      </div>
+
+      <h1>Entertainment law built<br>for the deal table.</h1>
+
+      <p class="hero-sub">
+        Practical counsel for talent, producers, production companies, studios, networks, streamers, and anyone building in the creator economy. From first conversation through signatures and delivery.
+      </p>
+
+      <div class="hero-cta-row">
+        <a class="btn primary" href="mailto:briankendallalexander@outlook.com">Start a conversation</a>
+        <a class="btn ghost" href="#services">See what we do</a>
+      </div>
+
+      <div class="hero-photo-row">
+        <img class="hero-photo" src="bliss-logo.png" alt="Bliss Legal Studio" />
+        <div class="hero-photo-text">
+          <strong>Bliss Legal Studio</strong>
+          Entertainment law and business affairs. Los Angeles, CA.
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-side reveal">
+      <div class="stat-card">
+        <div class="kicker">At a glance</div>
+        <div class="stat-grid">
+          <div class="stat-item">
+            <span class="stat-num">20+</span>
+            <span class="stat-label">Years in the entertainment industry</span>
+          </div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="kicker">Notable deals</div>
+        <div class="chips" style="margin-top: 0;">
+          <span class="chip">Netflix</span>
+          <span class="chip">Amazon</span>
+          <span class="chip">HBO</span>
+          <span class="chip">Apple</span>
+          <span class="chip">Lionsgate</span>
+        </div>
+        <p class="trust-note mt-12">California Bar admitted. Based in Los Angeles, CA.</p>
+      </div>
+
+      <div class="stat-card" style="background: rgba(10,10,11,0.04);">
+        <p style="font-size: 14px; color: var(--muted); line-height: 1.65; margin: 0;">
+          "We aim to be the team that makes it easier for creative and business partners to say yes — with terms that are aligned, defensible, and workable in the real world."
+        </p>
+        <p style="font-size: 12px; color: var(--muted2); margin-top: 10px;">— Bliss Legal Studio</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TRUST BAR ═══════════ -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><span class="trust-dot"></span>California Bar Admitted</div>
+    <span class="trust-sep">/</span>
+    <div class="trust-item"><span class="trust-dot"></span>20+ Years in Entertainment</div>
+    <span class="trust-sep">/</span>
+    <div class="trust-item"><span class="trust-dot"></span>Film &middot; TV &middot; Documentary &middot; Music</div>
+    <span class="trust-sep">/</span>
+    <div class="trust-item"><span class="trust-dot"></span>Deals at Netflix, Amazon, HBO, Apple</div>
+    <span class="trust-sep">/</span>
+    <div class="trust-item"><span class="trust-dot"></span>Based in Los Angeles</div>
+  </div>
+</div>
+
+<!-- ═══════════ SERVICES OVERVIEW ═══════════ -->
+<section id="services">
+  <div class="section-inner">
+
+    <div class="section-header reveal">
+      <div class="kicker">What we do</div>
+      <h2>Counsel built around how<br>the business actually works.</h2>
+      <p>We work with the full range of entertainment clients — talent, producers, production companies, studios, networks, streamers, labels, publishers, and creators. Here is where we spend most of our time.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <div class="service-icon">🎬</div>
+        <h3>Film &amp; TV Production Legal</h3>
+        <p>
+          We advise producers, directors, production companies, documentary teams, and studios on every phase of the production cycle — from acquiring the underlying rights through distribution. We are particularly fluent in independent film and documentary production, where every deal must serve both the creative vision and the bottom line.
+        </p>
+        <div class="service-tags">
+          <span class="tag">Rights acquisition</span>
+          <span class="tag">Entity structure</span>
+          <span class="tag">Chain of title</span>
+          <span class="tag">Clearances</span>
+          <span class="tag">Distribution deals</span>
+          <span class="tag">Talent &amp; crew</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">🎵</div>
+        <h3>Music Rights &amp; Licensing</h3>
+        <p>
+          We advise rights holders, licensees, labels, publishers, and creators on the full spectrum of music rights. Whether you are clearing a live concert for a streaming platform, licensing a catalog for a documentary, or structuring a co-publishing deal, our team brings deep experience from the highest levels of the business — with a commercial perspective that comes from years on the business affairs side.
+        </p>
+        <div class="service-tags">
+          <span class="tag">Sync licensing</span>
+          <span class="tag">Master &amp; publishing rights</span>
+          <span class="tag">Live event licensing</span>
+          <span class="tag">Catalog acquisitions</span>
+          <span class="tag">Co-publishing</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">⚖️</div>
+        <h3>Business Affairs &amp; Deal Strategy</h3>
+        <p>
+          Beyond deal-specific work, we advise clients on the legal infrastructure that supports a sustainable creative business — from entity formation and standard agreement templates to ongoing general counsel and strategic advice on how to structure relationships with partners, distributors, and collaborators.
+        </p>
+        <div class="service-tags">
+          <span class="tag">First-look deals</span>
+          <span class="tag">Co-pro &amp; co-financing</span>
+          <span class="tag">Distribution strategy</span>
+          <span class="tag">Templates &amp; playbooks</span>
+          <span class="tag">General counsel</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Deeper service details -->
+    <div class="mt-20">
+
+      <div class="service-detail reveal">
+        <div class="kicker">Film &amp; Television</div>
+        <h3>Production Legal for Every Phase of the Cycle</h3>
+        <p class="ideal">Ideal for: producers, directors, production companies, documentary teams, independent studios, and streamers.</p>
+        <p>
+          Good production legal is not about creating obstacles. It is about identifying the right issues early so the project stays on track. Our team works hands-on through development, pre-production, production, and post, bringing a perspective shaped by having sat on all sides of these deals. We know what buyers actually want, what falls apart at the finish line, and how to structure agreements that survive real-world production.
+        </p>
+        <p>
+          Our documentary and unscripted expertise runs deep. Complex subject clearances, archival rights, multiple rights holders, overlapping talent interests — we have navigated all of it, including some of the highest-profile documentary sales in the market.
+        </p>
+        <div class="detail-tags">
+          <span class="detail-tag">Option &amp; acquisition agreements</span>
+          <span class="detail-tag">Life rights</span>
+          <span class="detail-tag">Production entity structuring</span>
+          <span class="detail-tag">Above-the-line talent deals</span>
+          <span class="detail-tag">Crew &amp; below-the-line agreements</span>
+          <span class="detail-tag">Archival &amp; clip clearances</span>
+          <span class="detail-tag">E&amp;O readiness</span>
+          <span class="detail-tag">Distribution negotiation</span>
+          <span class="detail-tag">Co-production &amp; co-financing</span>
+          <span class="detail-tag">Delivery requirements</span>
+        </div>
+        <div class="benefit-callout">
+          <strong>Key benefit</strong>
+          You get senior-level dealmaking experience on every matter. Our practice has closed two of the largest documentary sales in the market. We know what the finish line looks like.
+        </div>
+      </div>
+
+      <div class="service-detail reveal">
+        <div class="kicker">Music Rights</div>
+        <h3>The Full Spectrum of Music Rights Transactions</h3>
+        <p class="ideal">Ideal for: labels, publishers, documentary teams, streaming platforms, concert producers, festival organizers, rights holders, and music-driven content companies.</p>
+        <p>
+          Music rights are among the most complex and easily mishandled issues in content production. Our background at UMG gave our team an unusually deep understanding of how music rights function across master rights, publishing, synchronization, public performance, digital distribution, and live event licensing. We have cleared music for award shows and festival performances, negotiated synchronization deals for documentaries, and structured catalog acquisitions and co-publishing arrangements.
+        </p>
+        <p>
+          We understand both the creative value of music and the commercial structures that govern it — which means we can advocate effectively for rights holders and help producers get their projects cleared without blowing the budget.
+        </p>
+        <div class="detail-tags">
+          <span class="detail-tag">Sync licensing (film &amp; TV)</span>
+          <span class="detail-tag">Master rights clearance</span>
+          <span class="detail-tag">Publishing rights</span>
+          <span class="detail-tag">Live performance clearances</span>
+          <span class="detail-tag">Festival &amp; award show licensing</span>
+          <span class="detail-tag">Co-publishing agreements</span>
+          <span class="detail-tag">Catalog acquisitions</span>
+          <span class="detail-tag">Digital distribution licensing</span>
+          <span class="detail-tag">Concert recording rights</span>
+        </div>
+        <div class="benefit-callout">
+          <strong>Key benefit</strong>
+          Music rights expertise that comes from the inside. Our team has negotiated these deals at major label scale and understands what rights holders will and will not move on — which makes us faster and more effective advocates on both sides of the table.
+        </div>
+      </div>
+
+      <div class="service-detail reveal">
+        <div class="kicker">Business Affairs &amp; Ongoing Counsel</div>
+        <h3>The Legal Infrastructure for a Creative Business</h3>
+        <p class="ideal">Ideal for: production companies, talent, independent studios, content creators, influencers, and music-driven content businesses building for the long term.</p>
+        <p>
+          Deal-by-deal legal work is necessary, but it is not enough. The most successful creative businesses we have worked with also have clean legal infrastructure — clear entity structures, well-drafted standard agreements, and a trusted advisor who understands both the legal side and the business side.
+        </p>
+        <p>
+          We offer ongoing general counsel relationships for clients who want a senior-level business affairs perspective available on a consistent basis, as well as project-specific engagements for clients who need targeted help with a transaction or situation.
+        </p>
+        <div class="detail-tags">
+          <span class="detail-tag">First-look &amp; output deals</span>
+          <span class="detail-tag">Strategic partnership agreements</span>
+          <span class="detail-tag">Agreement templates &amp; playbooks</span>
+          <span class="detail-tag">Talent representation agreements</span>
+          <span class="detail-tag">Producer agreements</span>
+          <span class="detail-tag">Writer agreements</span>
+          <span class="detail-tag">Ongoing general counsel</span>
+          <span class="detail-tag">Deal strategy &amp; structuring advice</span>
+        </div>
+        <div class="benefit-callout">
+          <strong>Key benefit</strong>
+          You get advisors who understand the business of entertainment, not just the law. Our team has been in the room for hundreds of negotiations and understands what deals look like from the buyer's side, the seller's side, and everywhere in between.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ HOW WE WORK ═══════════ -->
+<section id="approach" style="background: rgba(255,255,255,0.40); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="kicker">How we work</div>
+      <h2>Low drama. High clarity. Forward motion.</h2>
+      <p>Three things we focus on in every engagement.</p>
+    </div>
+
+    <div class="approach-grid">
+      <div class="approach-tile reveal">
+        <div class="num">01</div>
+        <h4>Get to the key points early.</h4>
+        <p>We focus negotiations on the issues that actually matter — deal points that affect money, control, and creative flexibility. Everything else is paper. We do not let secondary issues slow down the primary transaction.</p>
+      </div>
+      <div class="approach-tile reveal">
+        <div class="num">02</div>
+        <h4>Commercial creativity in structuring.</h4>
+        <p>Good attorneys find ways to say yes. We bring a business affairs perspective to the legal work — which means we are looking for structures that work for both sides and close deals, not positions that score points but blow them up.</p>
+      </div>
+      <div class="approach-tile reveal">
+        <div class="num">03</div>
+        <h4>Reliable follow-through.</h4>
+        <p>We are organized, responsive, and disciplined about keeping deals moving and getting to close. We know how to maintain momentum through long negotiations and complex multi-party situations without losing what matters to our client.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ RESULTS ═══════════ -->
+<section id="results">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="kicker">Selected results</div>
+      <h2>A track record at the top of the market.</h2>
+      <p>A sample of deals closed by our team during tenure at UMG / Polygram Entertainment. Shared at a high level.</p>
+    </div>
+
+    <div class="results-grid">
+      <div class="result-card reveal">
+        <span class="deal-title">Selena y Los Dinos</span>
+        <p class="deal-meta">Documentary sold to Netflix. One of the largest documentary deals in the market at the time of closing. Complex multi-party rights clearance involving one of the most iconic music estates in history.</p>
+        <span class="deal-highlight">Netflix &middot; Documentary</span>
+      </div>
+      <div class="result-card reveal">
+        <span class="deal-title">Man on the Run: A Paul McCartney Story</span>
+        <p class="deal-meta">Documentary sold to Amazon in a top-of-market acquisition. Extensive music rights clearance across one of the most complex catalogs in the world.</p>
+        <span class="deal-highlight">Amazon &middot; Documentary</span>
+      </div>
+      <div class="result-card reveal">
+        <span class="deal-title">Noah Kahan: Out of the Blue</span>
+        <p class="deal-meta">Structured and closed a multiparty agreement for a music-driven project with Netflix. Complex stakeholder negotiations spanning talent, rights holders, and production.</p>
+        <span class="deal-highlight">Netflix &middot; Music Documentary</span>
+      </div>
+      <div class="result-card reveal">
+        <span class="deal-title">The Bee Gees: How Can You Mend a Broken Heart</span>
+        <p class="deal-meta">Premium documentary for HBO. Award-winning project requiring complex music rights and estate clearances.</p>
+        <span class="deal-highlight">HBO &middot; Documentary</span>
+      </div>
+    </div>
+
+    <div class="card reveal" style="margin-top: 16px;">
+      <div class="kicker">Broader track record</div>
+      <div class="chips">
+        <span class="chip">Lionsgate first-look deal</span>
+        <span class="chip">Apple distribution partnerships</span>
+        <span class="chip">NBC content agreements</span>
+        <span class="chip">Multi-party co-productions</span>
+        <span class="chip">100+ talent &amp; producer agreements</span>
+        <span class="chip">International distribution deals</span>
+        <span class="chip">Catalog acquisition transactions</span>
+        <span class="chip">Complex clearance frameworks</span>
+        <span class="chip">Streaming platform partnerships</span>
+      </div>
+      <p class="text-muted text-sm mt-12">These are intentionally high-level. We are happy to discuss specifics in a conversation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TESTIMONIALS ═══════════ -->
+<!-- PLACEHOLDER: Replace these testimonials with real quotes from clients or colleagues. -->
+<section id="testimonials" style="background: rgba(255,255,255,0.40); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="kicker">What people say</div>
+      <h2>Trusted by creative and business teams.</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="quote-mark">"</div>
+        <p class="testimonial-text">Brian and I worked together on several complex multi-party deals. As SVP of Business and Legal Affairs at UMG, he coordinated years-long negotiations spanning multiple companies, artists, and estates simultaneously, managing competing interests with patience and clarity. What stood out most was how he treated every party as a genuine partner rather than an obstacle. Brian is an extraordinary dealmaker and a true connector.</p>
+        <div class="testimonial-author">
+          <strong>Natalia Nastaskin</strong>
+          <span>Chief Content Officer, Primary Wave Music Publishing</span>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="quote-mark">"</div>
+        <p class="testimonial-text">What set them apart was their ability to keep complex multi-party negotiations calm and moving forward. They knew where the real issues were and did not waste anyone's time on the rest. The deal closed on schedule and on terms we could all live with.</p>
+        <div class="testimonial-author">
+          <strong>[Client Name]</strong>
+          <span>Executive, Content Distribution</span>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="quote-mark">"</div>
+        <p class="testimonial-text">Bliss handled one of the most complex music rights clearances I have ever seen on a documentary. They understood the rights landscape, knew what the labels needed, and found a structure that worked for everyone. Exceptional work.</p>
+        <div class="testimonial-author">
+          <strong>[Client Name]</strong>
+          <span>Director &amp; Producer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FAQ ═══════════ -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="kicker">Frequently asked</div>
+      <h2>Common questions.</h2>
+    </div>
+
+    <div class="faq-list reveal">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Who do you typically work with?
+          <span class="faq-arrow" aria-hidden="true">&#8964;</span>
+        </button>
+        <div class="faq-a">
+          We work with the full range of entertainment clients — talent, producers, production companies, independent studios, streamers, networks, labels, publishers, and individual creators. We are equally comfortable representing a first-time documentary filmmaker navigating their first festival sale and a major production company closing a multi-project deal with a streaming platform.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Do you handle both the legal and business affairs sides?
+          <span class="faq-arrow" aria-hidden="true">&#8964;</span>
+        </button>
+        <div class="faq-a">
+          Yes. Our team's background spans both. We are licensed California attorneys and we have spent over 20 years working on the business affairs side of the entertainment industry — including eight years at the SVP level at a major entertainment company. We understand how deals are structured commercially, not just legally, which makes us more effective in negotiations and deal structuring.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Can you help clear music rights for a documentary or film?
+          <span class="faq-arrow" aria-hidden="true">&#8964;</span>
+        </button>
+        <div class="faq-a">
+          Absolutely. Music clearance for film and television is a significant area of our practice. This includes festival and concert footage clearances, sync licenses for narrative and documentary features, clearing songs for award shows and live events, and working across master rights, publishing rights, and synchronization. Our background at UMG gave us an unusually deep understanding of how labels and publishers approach these negotiations, which helps us move faster and get to yes more efficiently.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How does a new engagement typically work?
+          <span class="faq-arrow" aria-hidden="true">&#8964;</span>
+        </button>
+        <div class="faq-a">
+          We start with a conversation. We want to understand your project, your goals, and what kind of help you need. From there we can structure the engagement as a flat fee for a defined transaction, an hourly arrangement, or an ongoing retainer for clients who want consistent access to senior-level counsel. We try to match the fee structure to the nature of the work.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Can I hire you for a single deal or project?
+          <span class="faq-arrow" aria-hidden="true">&#8964;</span>
+        </button>
+        <div class="faq-a">
+          Yes. A lot of our clients come to us for a specific transaction — a distribution deal, a rights acquisition, a talent agreement, a music licensing issue — and we build from there. You do not need an ongoing retainer to work with us.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Do you work with talent directly, or only with companies?
+          <span class="faq-arrow" aria-hidden="true">&#8964;</span>
+        </button>
+        <div class="faq-a">
+          Both. We advise companies at all stages and we also work directly with individual talent — writers, directors, producers, musicians, and creators — on their agreements, deals, and business structures. We understand the perspective from both sides of the negotiating table, which makes us more effective for all of our clients.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Are you based in Los Angeles?
+          <span class="faq-arrow" aria-hidden="true">&#8964;</span>
+        </button>
+        <div class="faq-a">
+          Yes. We are based in Los Angeles and admitted to the California Bar. Most of our work is in the Los Angeles market, though we regularly work on projects and transactions across all US markets and internationally.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TEAM ═══════════ -->
+<section id="team" style="background: rgba(255,255,255,0.40); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="kicker">Our team</div>
+      <h2>Senior attorneys. Hands-on every time.</h2>
+      <p>At Bliss Legal Studio, every client works directly with a senior attorney. No hand-offs to junior associates.</p>
+    </div>
+
+    <div class="team-grid">
+
+      <!-- Brian Alexander -->
+      <div class="team-card reveal">
+        <div class="team-photo-row">
+          <img class="team-photo" src="brian-alexander.jpg" alt="Brian Alexander" />
+          <div class="team-name-block">
+            <strong>Brian Alexander</strong>
+            <span>Founding Attorney &middot; Entertainment Law &amp; Business Affairs</span>
+          </div>
+        </div>
+        <p>
+          Brian has been in the entertainment business for over 20 years, working across every sector of the industry. For eight years he served as SVP of Business &amp; Legal Affairs at UMG / Polygram Entertainment, where he led all film and television dealmaking for the division.
+        </p>
+        <p>
+          During that time he closed some of the largest documentary sales in the market — including deals with Netflix, Amazon, HBO, Apple, and Lionsgate — and helped build Polygram into a credible, premium content player in music-driven documentary and narrative content.
+        </p>
+        <p>
+          Brian is a licensed California attorney with deep expertise in production legal, music rights, distribution transactions, and ongoing business affairs counsel. His fluency in both the legal and commercial sides of entertainment is what distinguishes his practice.
+        </p>
+        <div class="team-tags">
+          <span class="tag">Production Legal</span>
+          <span class="tag">Music Rights</span>
+          <span class="tag">Distribution</span>
+          <span class="tag">Business Affairs</span>
+          <span class="tag">Documentary</span>
+          <span class="tag">California Bar</span>
+        </div>
+      </div>
+
+      <!-- Mara Virabov — placeholder -->
+      <div class="team-card reveal">
+        <div class="team-photo-row">
+          <div class="team-photo-placeholder">MV</div>
+          <div class="team-name-block">
+            <strong>Mara Virabov</strong>
+            <span>Founding Attorney &middot; Entertainment Law</span>
+          </div>
+        </div>
+        <div class="team-placeholder-note">
+          Full biography coming soon. We are excited to share more about Mara and her background in entertainment law. Stay tuned.
+        </div>
+        <div class="team-tags" style="margin-top: 16px;">
+          <span class="tag">Entertainment Law</span>
+          <span class="tag">Los Angeles</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="kicker">About the firm</div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <h3>Practical counsel. Creative-friendly execution.</h3>
+        <p>
+          Bliss Legal Studio is a Los Angeles-based entertainment law practice focused on film, television, and music rights transactions. We advise talent, producers, production companies, studios, networks, streamers, and creators across every phase of the deal cycle.
+        </p>
+        <p>
+          Our founding attorney, Brian Alexander, has spent over 20 years in the entertainment business working across every sector — as an agent, a manager, a studio executive, and an attorney. That breadth gives our practice a perspective that is genuinely unusual: we understand what matters to the creative, what matters to the business, and how to find the deal structure that serves both.
+        </p>
+        <p>
+          We are a boutique practice by design. Every client works directly with a senior attorney who brings real-world dealmaking experience to the table. Our goal is to be the team that makes it easier for creative and business partners to say yes — with terms that are aligned, defensible, and workable in the real world.
+        </p>
+        <div class="divider"></div>
+        <p style="font-size: 14px; color: var(--muted);">
+          California Bar Admitted &middot; Based in Los Angeles &middot; Entertainment law and business affairs
+        </p>
+      </div>
+
+      <div class="about-values reveal">
+        <div class="kicker">What we stand for</div>
+
+        <div class="value-row">
+          <div class="value-icon">🎯</div>
+          <div>
+            <strong>Directness</strong>
+            <span>We tell you what we think, not what you want to hear. That kind of honest counsel saves time and protects you.</span>
+          </div>
+        </div>
+
+        <div class="value-row">
+          <div class="value-icon">🤝</div>
+          <div>
+            <strong>Commercial creativity</strong>
+            <span>We look for ways to say yes. The best deals serve both sides, and we bring that perspective to every negotiation.</span>
+          </div>
+        </div>
+
+        <div class="value-row">
+          <div class="value-icon">⚡</div>
+          <div>
+            <strong>Speed and follow-through</strong>
+            <span>We are organized, responsive, and disciplined about keeping deals moving and getting to close.</span>
+          </div>
+        </div>
+
+        <div class="value-row">
+          <div class="value-icon">🎵</div>
+          <div>
+            <strong>Music and content fluency</strong>
+            <span>We understand the intersection of music rights and film and television production at a depth most entertainment practices do not have.</span>
+          </div>
+        </div>
+
+        <div class="value-row">
+          <div class="value-icon">🏛️</div>
+          <div>
+            <strong>Integrity</strong>
+            <span>We have built our reputation deal by deal. Every engagement gets our full attention and our honest best work.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT / CTA ═══════════ -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact-card reveal">
+      <h2>Let's talk about your project.</h2>
+      <p>Email is the best way to reach us. Tell us about what you are working on and we will get back to you quickly.</p>
+      <div class="contact-btn-row">
+        <a class="btn btn-light" href="mailto:briankendallalexander@outlook.com">briankendallalexander@outlook.com</a>
+        <button class="btn btn-ghost-light" id="copyEmail" type="button">Copy email</button>
+        <a class="btn btn-ghost-light" href="https://www.linkedin.com/in/briankendallalexander/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="container">
+    <p>
+      &copy; <span id="year"></span> Bliss Legal Studio &middot; Entertainment Law &amp; Business Affairs &middot; Los Angeles, CA
+      &nbsp;&middot;&nbsp;
+      <a href="mailto:briankendallalexander@outlook.com">briankendallalexander@outlook.com</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://www.linkedin.com/in/briankendallalexander/" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+    <p style="margin-top: 6px; font-size: 12px; color: var(--muted2);">
+      This website is for informational purposes only and does not constitute legal advice or create an attorney-client relationship.
+    </p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  // ─── Year ───
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ─── Scroll reveal ───
+  const revealEls = Array.from(document.querySelectorAll('.reveal'));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  revealEls.forEach(el => io.observe(el));
+
+  // ─── FAQ accordion ───
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // ─── Toast ───
+  const toast = document.getElementById('toast');
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(() => toast.classList.remove('show'), 1800);
+  }
+
+  // ─── Copy email ───
+  const EMAIL = 'briankendallalexander@outlook.com';
+  async function copyEmail() {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      showToast('Email copied');
+    } catch (e) {
+      const ta = document.createElement('textarea');
+      ta.value = EMAIL;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      ta.remove();
+      showToast('Email copied');
+    }
+  }
+  document.getElementById('copyEmail').addEventListener('click', copyEmail);
+</script>
+</body>
+</html>
