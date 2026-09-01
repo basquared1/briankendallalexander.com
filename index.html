@@ -1,18 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta property="og:image" content="https://briankendallalexander.com/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Brian Alexander</title>
+  <title>Brian Alexander | Entertainment Attorney &amp; Business &amp; Legal Affairs</title>
 
-  <meta name="description" content="Brian Alexander — Business & Legal Affairs, Film, Television & Audio" />
+  <meta name="description" content="Entertainment attorney with extensive Business &amp; Legal Affairs experience in documentary, unscripted, production legal, rights, clearances, and film and television dealmaking." />
   <meta name="theme-color" content="#0b0b0c" />
+  <link rel="canonical" href="https://briankendallalexander.com/" />
 
-  <meta property="og:title" content="Brian Alexander" />
-  <meta property="og:description" content="Business & Legal Affairs · Film & Television" />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Brian Alexander | Entertainment Attorney" />
+  <meta property="og:description" content="Business &amp; Legal Affairs attorney with deep experience in documentary, unscripted, development, production, rights and licensing." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://briankendallalexander.com/" />
+  <meta property="og:image" content="https://briankendallalexander.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Brian Alexander | Entertainment Attorney" />
+  <meta name="twitter:description" content="Business &amp; Legal Affairs attorney with deep experience in documentary, unscripted, development, production, rights and licensing." />
+  <meta name="twitter:image" content="https://briankendallalexander.com/og-image.png" />
 
   <style>
     :root{
@@ -63,7 +70,7 @@
     }
 
     .topbar-inner{
-      max-width: var(--max);
+      max-width: 1120px;
       margin: 0 auto;
       padding: 12px 22px;
       display: flex;
@@ -109,9 +116,9 @@
 
     nav{
       display:flex;
-      gap: 8px;
+      gap: 7px;
       flex-wrap: nowrap;
-      justify-content: flex-end;
+      justify-content: flex-start;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
@@ -119,12 +126,27 @@
     }
     nav::-webkit-scrollbar { display: none; }
 
+    /* below this the brand subtitle crowds the nav out of the bar entirely;
+       the hero states the same line immediately underneath */
+    @media (max-width: 600px){
+      .brand-text span{ display: none; }
+    }
+
+    @media (min-width: 761px){
+      nav{
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        overflow-x: visible;
+        row-gap: 6px;
+      }
+    }
+
     nav a{
       text-decoration:none;
       font-size: 13px;
       color: rgba(11,11,12,0.78);
       border: 1px solid rgba(0,0,0,0.08);
-      padding: 7px 11px;
+      padding: 7px 10px;
       border-radius: 999px;
       background: rgba(255,255,255,0.55);
       transition: transform .12s ease, background .12s ease;
@@ -189,6 +211,13 @@
       margin: 0 0 18px;
       max-width: 56ch;
     }
+
+    .subtitle p{
+      color: inherit;
+      max-width: none;
+      margin: 0 0 10px;
+    }
+    .subtitle p:last-child{ margin-bottom: 0; }
 
     .cta-row{
       position: relative;
@@ -279,25 +308,6 @@
       white-space: nowrap;
     }
 
-    .quick-note{
-      margin-top: 16px;
-      padding: 12px 14px;
-      border-radius: 12px;
-      background: rgba(11,11,12,0.04);
-      border-left: 3px solid rgba(11,11,12,0.15);
-      font-size: 13px;
-      color: rgba(11,11,12,0.80);
-      line-height: 1.5;
-    }
-    .quick-note strong{
-      display: block;
-      margin-bottom: 4px;
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
     section{
       margin-top: 22px;
       scroll-margin-top: 92px;
@@ -313,22 +323,26 @@
 
     .kicker{
       font-size: 13px;
+      font-weight: 400;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: rgba(11,11,12,0.62);
       margin: 0 0 10px;
     }
 
-    h3{
+    .section-card h2{
       margin: 0 0 12px;
       font-size: 22px;
       letter-spacing: -0.02em;
+      font-weight: 700;
     }
 
     p{
       margin: 0 0 10px;
       color: rgba(11,11,12,0.85);
-      max-width: 78ch;
+      /* the ch unit tracks the digit glyph, which is wider than this
+         font's average character: 58ch measures out to ~72 characters */
+      max-width: 58ch;
     }
 
     .grid-3{
@@ -349,10 +363,11 @@
       padding: 16px;
       min-height: 120px;
     }
-    .tile strong{
+    .tile h3{
       display:block;
       font-size: 15px;
-      margin-bottom: 6px;
+      font-weight: 650;
+      margin: 0 0 6px;
       letter-spacing: -0.01em;
     }
     .tile span{
@@ -380,19 +395,45 @@
       margin: 8px 0;
     }
 
-    .highlights{
-      display:flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 12px;
+    .works{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
     }
-    .chip{
+    @media (max-width: 760px){
+      .works{ grid-template-columns: 1fr; }
+    }
+    .works li{
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,0.75);
+      padding: 12px 14px;
+      font-size: 14px;
+      line-height: 1.35;
+    }
+    .works li cite{
+      font-style: italic;
+      color: var(--text);
+    }
+    .works li .plat{
+      display: block;
+      margin-top: 3px;
       font-size: 13px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(0,0,0,0.10);
-      background: rgba(0,0,0,0.03);
+      color: var(--muted);
+    }
+
+    .pullquote{
+      margin: 16px 0 0;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: rgba(11,11,12,0.04);
+      border-left: 3px solid rgba(11,11,12,0.15);
+      font-size: 13px;
       color: rgba(11,11,12,0.80);
+      line-height: 1.5;
     }
 
     .contact-row{
@@ -454,17 +495,18 @@
         <div class="mark" aria-hidden="true"></div>
         <div class="brand-text">
           <strong>Brian Alexander</strong>
-          <span>Business & Legal Affairs · Film & Television</span>
+          <span>Entertainment Attorney &middot; Business &amp; Legal Affairs</span>
         </div>
       </a>
 
       <nav aria-label="Primary">
         <a href="#about">About</a>
-        <a href="#approach">How I work</a>
-        <a href="#focus">Focus</a>
-        <a href="#highlights">Highlights</a>
+        <a href="#approach">How I Work</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#selected-work">Selected Work</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
+        <a href="#community">Community</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -476,14 +518,15 @@
         <div class="hero-card reveal">
           <h1>Brian Alexander</h1>
           <div class="subtitle">
-            Business & Legal Affairs executive with 20+ years of in-house experience advising studios, networks, platforms, and production companies on film, TV, and podcast deals, rights, and distribution, with a practical, production-informed perspective.
+            <p>Business &amp; Legal Affairs attorney with more than 20 years of hands-on experience in the acquisition, development, production and licensing of film and television content, with particular depth in documentary, nonfiction and unscripted programming.</p>
+            <p>Experienced working directly with producers, production companies, talent representatives and cross-functional teams from development through delivery.</p>
           </div>
 
           <div class="cta-row">
-            <a class="btn resume" href="Brian_K_Alexander_Resume.pdf" target="_blank" rel="noopener">&#8659; Download Résumé</a>
+            <a class="btn resume" href="Brian_K_Alexander_Resume.pdf" target="_blank" rel="noopener">&#8659; Download R&eacute;sum&eacute;</a>
             <a class="btn primary" href="mailto:briankendallalexander@outlook.com">Email</a>
-            <a class="btn" href="https://www.linkedin.com/in/briankendallalexander/" target="_blank" rel="noopener">LinkedIn</a>
-            <button class="btn" type="button" id="copyEmail" aria-label="Copy email to clipboard">Copy email</button>
+            <a class="btn" href="https://www.linkedin.com/in/briankendallalexander/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <button class="btn" type="button" id="copyEmail" aria-label="Copy email address to clipboard">Copy email</button>
           </div>
 
           <div style="margin-top: 18px; display:flex; align-items: center; gap: 12px;">
@@ -494,23 +537,21 @@
           </div>
         </div>
 
-        <aside class="cred reveal" aria-label="At-a-glance">
+        <aside class="cred reveal" aria-label="At a glance">
           <h2>At a glance</h2>
           <div class="pillrow">
-            <div class="pill">Dealmaking & drafting</div>
-            <div class="pill">Rights & clearances</div>
-            <div class="pill">Production legal</div>
-            <div class="pill">Scripted and unscripted</div>
-            <div class="pill">Film, TV & Podcast content</div>
-            <div class="pill">Platform partnerships</div>
-            <div class="pill">Cross-functional experience</div>
+            <div class="pill">Documentary &amp; Unscripted</div>
+            <div class="pill">Development, Production &amp; Licensing</div>
+            <div class="pill">Production Legal</div>
+            <div class="pill">Rights &amp; Clearances</div>
+            <div class="pill">Talent, Producer &amp; Participant Deals</div>
+            <div class="pill">Cross-Functional Counsel</div>
           </div>
 
-          <div class="quick-note">
-            <strong>Quick note</strong>
-            I keep negotiations calm and focused on the key business points so teams can move forward quickly,
-            with terms that are workable in the real world.
-          </div>
+          <blockquote class="pullquote">
+            I like being close to the work: negotiating and drafting agreements, resolving
+            production and clearance issues, and helping teams move projects forward.
+          </blockquote>
         </aside>
       </div>
     </header>
@@ -519,139 +560,132 @@
     <section id="about" class="reveal">
       <div class="section-card">
         <div class="kicker">About</div>
-        <h3>Practical counsel, creative-friendly execution.</h3>
+        <h2>Practical counsel, creative-friendly execution.</h2>
         <p>
-          I partner with creative, production, and business teams to structure and close deals that are clear,
-          durable, and executable, from first conversations through signatures and delivery.
+          I am an entertainment Business &amp; Legal Affairs attorney with more than 20 years of
+          experience in the acquisition, development, production and licensing of film and
+          television content.
         </p>
         <p>
-          My background spans production companies, networks/distributors, and studios/funders, which helps me anticipate
-          friction points early and keep negotiations moving without losing what matters.
+          My background includes senior in-house roles at UMG/Polygram Entertainment,
+          Discovery/TLC and Viacom, as well as leading production legal at Magical Elves. I have
+          worked within studios, networks and production companies, giving me a practical
+          understanding of what creative and production teams need from their lawyers.
+        </p>
+        <p>
+          I negotiate and draft development, production, co-production, talent, rights, format,
+          services, licensing and distribution agreements and independently handle production
+          legal and clearance matters throughout the life of a project.
         </p>
       </div>
     </section>
 
-    <!-- APPROACH -->
+    <!-- HOW I WORK -->
     <section id="approach" class="reveal">
       <div class="section-card">
         <div class="kicker">How I work</div>
-        <h3>Low drama. High clarity. Forward motion.</h3>
+        <h2>Practical, collaborative and production-minded.</h2>
         <p>
-          I aim to be the person who makes it easier for creative and business teams to say "yes", with terms that are aligned, defensible, and workable in the real world.
+          I keep negotiations focused on the business points that matter, with terms that are
+          clear, defensible and workable in production.
         </p>
         <p>
-          I'm direct, collaborative, and disciplined about getting to the key business points early,
-          so negotiations don't drift into endless paper.
+          My approach is direct, responsive and relationship-focused. I protect the company&rsquo;s
+          interests while recognizing that a successful deal should also preserve the creative and
+          business relationships needed to make the project.
         </p>
       </div>
     </section>
 
-    <!-- FOCUS -->
-    <section id="focus" class="reveal">
+    <!-- EXPERTISE -->
+    <section id="expertise" class="reveal">
       <div class="section-card">
-        <div class="kicker">Focus</div>
-        <h3>What I'm often brought in to handle</h3>
+        <div class="kicker">Expertise</div>
+        <h2>Core experience</h2>
 
         <div class="grid-3" role="list">
           <div class="tile" role="listitem">
-            <strong>Film & TV dealmaking</strong>
-            <span>Development, acquisition, production, distribution, co-financing, and strategic partnerships.</span>
+            <h3>Documentary &amp; Nonfiction</h3>
+            <span>Development, production and licensing of documentary, unscripted, factual and music-driven series and features.</span>
           </div>
           <div class="tile" role="listitem">
-            <strong>Rights, clearances & risk</strong>
-            <span>Chain of title, underlying rights, music, archival, releases, E&amp;O readiness, and practical risk calls.</span>
+            <h3>Development, Production &amp; Licensing</h3>
+            <span>Development agreements, production services agreements, co-productions, format licenses, options, financing and distribution arrangements.</span>
           </div>
           <div class="tile" role="listitem">
-            <strong>Production legal</strong>
-            <span>Hands-on support during prep/production/post; issue-spotting that respects schedules and budgets.</span>
+            <h3>Production Legal &amp; Clearances</h3>
+            <span>Underlying rights, chain of title, music and archival materials, releases, credits, approvals, guild matters and E&amp;O readiness.</span>
           </div>
           <div class="tile" role="listitem">
-            <strong>Talent & producer agreements</strong>
-            <span>Writers, directors, producers, on-camera, voice, estates, and bespoke participation structures.</span>
+            <h3>Talent, Producers &amp; Participants</h3>
+            <span>Agreements for producers, directors, hosts, on-camera talent, participants, writers, estates and other creative partners.</span>
           </div>
           <div class="tile" role="listitem">
-            <strong>Scripted, unscripted & animation</strong>
-            <span>Scripted series, limited series, animated features, and docs, including kids & family originals sold to major networks and streamers.</span>
+            <h3>Rights Acquisition &amp; IP</h3>
+            <span>Options, underlying rights, life rights, catalog-based IP and multi-party projects involving overlapping music, publishing, footage and talent rights.</span>
           </div>
           <div class="tile" role="listitem">
-            <strong>Internal leadership</strong>
-            <span>Cross-functional alignment, scalable templates, and process improvements that reduce cycle time.</span>
+            <h3>Cross-Functional Counsel</h3>
+            <span>Practical support for Content, Production, Finance, Marketing, Communications and Legal teams from development through delivery.</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- HIGHLIGHTS -->
-    <section id="highlights" class="reveal">
+    <!-- SELECTED WORK -->
+    <section id="selected-work" class="reveal">
       <div class="section-card">
-        <div class="kicker">Selected highlights</div>
-        <h3>Representative work (high-level)</h3>
+        <div class="kicker">Selected work</div>
+        <h2>UMG / Polygram Entertainment</h2>
 
-        <p style="color: var(--muted);">
-          These are intentionally broad. I'm happy to share specifics in conversation where appropriate.
+        <p>
+          From 2017 through 2025, I served as the lead in-house Business &amp; Legal Affairs
+          attorney for UMG&rsquo;s film and television slate, primarily through Polygram
+          Entertainment. I remained hands-on throughout the full lifecycle of projects,
+          negotiating and drafting agreements and handling production legal, rights and clearance
+          matters from development through delivery.
         </p>
 
-        <div class="highlights" aria-label="Highlights list">
-          <span class="chip">Negotiating high-value film & series packages</span>
-          <span class="chip">Closing multi-party stakeholder deals</span>
-          <span class="chip">Structuring rights + clearance frameworks</span>
-          <span class="chip">Supporting productions end-to-end (development, delivery, distribution)</span>
-          <span class="chip">Advising senior leadership on risk + strategy</span>
-          <span class="chip">Building templates/process that scale output</span>
-          <span class="chip">Scripted series, network & streaming</span>
-          <span class="chip">Kids & family originals</span>
-          <span class="chip">Animated features & series</span>
-          <span class="chip">Podcast co-productions</span>
-          <span class="chip">Branded entertainment & sponsorship integration</span>
-          <span class="chip">Digital platform & SVOD partnerships</span>
-        </div>
-      </div>
-    </section>
+        <h3 class="kicker" style="margin-top: 20px; margin-bottom: 0;">Documentary &amp; Nonfiction</h3>
+        <ul class="works">
+          <li><cite>Noah Kahan: Out of Body</cite><span class="plat">Netflix</span></li>
+          <li><cite>Selena y Los Dinos</cite><span class="plat">Netflix</span></li>
+          <li><cite>Paul McCartney: Man on the Run</cite><span class="plat">Amazon</span></li>
+          <li><cite>The Bee Gees: How Can You Mend a Broken Heart</cite><span class="plat">HBO</span></li>
+          <li><cite>The Velvet Underground</cite><span class="plat">Apple TV+</span></li>
+          <li><cite>STAX: Soulsville U.S.A.</cite><span class="plat">HBO</span></li>
+          <li><cite>Beastie Boys Story</cite><span class="plat">Apple TV+</span></li>
+          <li><cite>Love to Love You, Donna Summer</cite><span class="plat">HBO</span></li>
+          <li><cite>Hitsville: The Making of Motown</cite><span class="plat">Showtime</span></li>
+          <li><cite>The Go-Go&rsquo;s</cite><span class="plat">Showtime</span></li>
+          <li><cite>Louis Armstrong&rsquo;s Black &amp; Blues</cite><span class="plat">Apple TV+</span></li>
+        </ul>
 
-    <!-- RECENT ACCOMPLISHMENTS (UMG) -->
-    <section id="umg-accomplishments" class="reveal">
-      <div class="section-card">
-        <div class="kicker">Recent accomplishments</div>
-        <h3>UMG / Polygram Entertainment</h3>
+        <h3 class="kicker" style="margin-top: 20px; margin-bottom: 0;">Scripted and Animation</h3>
+        <ul class="works">
+          <li><cite>Zoey&rsquo;s Extraordinary Playlist</cite><span class="plat">NBC</span></li>
+          <li><cite>The Greatest / Ali</cite><span class="plat">Amazon</span></li>
+          <li><cite>Marley and the Family Band</cite><span class="plat">Nickelodeon</span></li>
+          <li><cite>Bob Marley Animated Feature</cite><span class="plat">Disney</span></li>
+        </ul>
 
-        <p style="color: var(--muted);">
-          As Senior Vice President of Business &amp; Legal Affairs, I oversaw all film, television, and podcast dealmaking for eight plus years, helping build the division into a meaningful player in premium documentary, scripted, animated, and music-driven content across every major platform.
+        <h3 class="kicker" style="margin-top: 20px; margin-bottom: 0;">Podcasts</h3>
+        <ul class="works">
+          <li><cite>Ali in Me</cite><span class="plat">Audible</span></li>
+          <li><cite>Queer the Music: Jake Shears</cite><span class="plat">Mercury Studios</span></li>
+          <li><cite>Jacked</cite><span class="plat">Wondery</span></li>
+        </ul>
+
+        <p style="margin-top: 18px;">
+          Projects produced during my tenure received Emmy Awards and nominations, a Peabody Award
+          for <cite>STAX: Soulsville U.S.A.</cite>, the Sundance Audience Award for
+          <cite>Selena y Los Dinos</cite>, and selection of <cite>The Velvet Underground</cite> for
+          The Criterion Collection.
         </p>
-
-        <div class="kicker" style="margin-top: 18px; margin-bottom: 6px;">Documentary &amp; unscripted</div>
-        <div class="highlights" aria-label="Documentary deal results">
-          <span class="chip"><em>Noah Kahan: Out of Body</em> / Netflix</span>
-          <span class="chip"><em>Selena y Los Dinos</em> / Netflix</span>
-          <span class="chip"><em>Man on the Run: A Paul McCartney Story</em> / Amazon</span>
-          <span class="chip"><em>The Bee Gees: How Can You Mend a Broken Heart</em> / HBO</span>
-          <span class="chip"><em>The Velvet Underground</em> / Apple</span>
-          <span class="chip"><em>Stax: Soulsville USA</em> / HBO</span>
-          <span class="chip"><em>The Beastie Boys Story</em> / Apple TV+</span>
-          <span class="chip"><em>Ozzy &amp; Sharon</em> / Sony</span>
-          <span class="chip"><em>Fight the Power</em> / MGM</span>
-        </div>
-
-        <div class="kicker" style="margin-top: 18px; margin-bottom: 6px;">Scripted series</div>
-        <div class="highlights" aria-label="Scripted deal results">
-          <span class="chip"><em>Zoey's Extraordinary Playlist</em> / NBC — scripted series</span>
-          <span class="chip"><em>The Greatest / Ali</em> / Amazon — scripted limited series</span>
-        </div>
-
-        <div class="kicker" style="margin-top: 18px; margin-bottom: 6px;">Kids &amp; family / animation</div>
-        <div class="highlights" aria-label="Kids and family deal results">
-          <span class="chip"><em>Marley &amp; the Family Band</em> / Nick Jr. — animated series</span>
-          <span class="chip"><em>Bob Marley Animated Feature</em> / Disney</span>
-        </div>
-
-        <div class="kicker" style="margin-top: 18px; margin-bottom: 6px;">Podcast</div>
-        <div class="highlights" aria-label="Podcast deal results">
-          <span class="chip"><em>Ali in Me</em> / Audible Original Podcast</span>
-          <span class="chip"><em>Queer the Music: Jake Shears</em> / Mercury Studios</span>
-          <span class="chip"><em>Jacked</em> / Wondery co-production</span>
-        </div>
-
-        <p style="color: var(--muted); margin-top: 14px;">
-          During the time that I led business and legal affairs, Polygram Entertainment was transformed into a globally recognized film and television studio within UMG, the world's largest music company. The studio delivered a steady stream of high-profile, culturally impactful projects with top creative partners, including Ron Howard, Spike Jonze, Morgan Neville, and Todd Haynes, and platforms such as Netflix, HBO, Apple TV+, NBC, and Amazon. Its work has been widely recognized with major industry honors, including Emmy Awards and nominations across multiple titles, a Peabody Award for Stax: Soulsville U.S.A., and festival recognition, including the Audience Award at Sundance for Selena y Los Dinos. The Velvet Underground earned a place in the prestigious Criterion Collection, a rare distinction that underscores the caliber of the work. What began as a catalog-driven initiative evolved into a scalable, multi-platform content business, demonstrating how world-class IP, creative ideas, disciplined execution, and strategic talent and platform partnerships can generate enduring franchise value.
+        <p>
+          My role was to provide the dealmaking and legal infrastructure behind that work:
+          structuring transactions, securing rights, resolving production issues and helping
+          creative, business and corporate teams move projects from concept to release.
         </p>
       </div>
     </section>
@@ -659,27 +693,30 @@
     <!-- EXPERIENCE -->
     <section id="experience" class="reveal">
       <div class="section-card">
-        <div class="kicker">Experience snapshot</div>
-        <h3>Perspective across the full entertainment business and legal ecosystem</h3>
+        <div class="kicker">Experience</div>
+        <h2>Experience across the entertainment ecosystem</h2>
 
         <div class="split">
           <div>
-            <strong style="display:block; margin-bottom:8px;">Where I've operated</strong>
+            <strong style="display:block; margin-bottom:8px;">Where I&rsquo;ve operated</strong>
             <ul class="clean">
-              <li>Studios / funders / investors</li>
-              <li>Networks & distributors</li>
-              <li>Production companies (hands-on production legal)</li>
-              <li>Unique Music + IP adjacency in scripted, unscripted, podcasts and animation</li>
+              <li>In-house film and television studio</li>
+              <li>Broadcast and cable networks</li>
+              <li>Nonfiction production company</li>
+              <li>Talent representation</li>
+              <li>Music and catalog-based intellectual property</li>
             </ul>
           </div>
 
           <div>
             <strong style="display:block; margin-bottom:8px;">What teams get from me</strong>
             <ul class="clean">
-              <li>Clear drafting and calm negotiations</li>
-              <li>Fast issue-spotting (without over-lawyering)</li>
-              <li>Commercial creativity in structuring</li>
-              <li>Reliable follow-through and clean closes</li>
+              <li>Hands-on negotiating and drafting</li>
+              <li>Independent ownership of projects</li>
+              <li>Practical production counsel</li>
+              <li>Clear and timely decision-making</li>
+              <li>Collaborative cross-functional support</li>
+              <li>Calm negotiations and reliable closes</li>
             </ul>
           </div>
         </div>
@@ -690,37 +727,34 @@
     <section id="education" class="reveal">
       <div class="section-card">
         <div class="kicker">Education &amp; Bar Admission</div>
-        <h3>Florida State University</h3>
+        <h2>Florida State University</h2>
         <ul class="clean">
-          <li><strong>Juris Doctor (J.D.), with Honors</strong> — Florida State University College of Law · Editor, Journal of Land Use and Environmental Law</li>
-          <li><strong>Bachelor of Arts (B.A.), English Literature</strong> — Florida State University</li>
+          <li><strong>Juris Doctor (J.D.), with Honors</strong> &mdash; Florida State University College of Law &middot; Editor, Journal of Land Use and Environmental Law</li>
+          <li><strong>Bachelor of Arts (B.A.), English Literature</strong> &mdash; Florida State University</li>
         </ul>
         <p style="margin-top: 12px; color: var(--muted); font-size: 13px;">
-          California State Bar — Active Member
+          California State Bar &mdash; Active Member
         </p>
       </div>
     </section>
 
     <!-- COMMUNITY -->
-    <section id="credibility" class="reveal">
+    <section id="community" class="reveal">
       <div class="section-card">
-        <div class="kicker">Community & board service</div>
-        <h3>Engagement beyond the deal table</h3>
+        <div class="kicker">Community &amp; board service</div>
+        <h2>Engagement beyond the deal table</h2>
 
         <ul class="clean">
           <li>
-            <strong>Court Appointed Special Advocate (CASA)</strong> —
-            Volunteer advocate supporting youth in the foster care and juvenile court systems.
+            <strong>Court Appointed Special Advocate (CASA)</strong> &mdash;
+            Volunteer advocate supporting youth in the foster care and Los Angeles County
+            juvenile court systems.
           </li>
           <li>
-            <strong>Outfest</strong> —
+            <strong>Outfest</strong> &mdash;
             Former board member supporting LGBTQ+ filmmakers and independent storytelling.
           </li>
         </ul>
-
-        <p style="margin-top:12px; color: var(--muted); font-size: 13px;">
-          These roles reflect a long-standing commitment to mentorship, advocacy, and creative communities.
-        </p>
       </div>
     </section>
 
@@ -728,22 +762,22 @@
     <section id="contact" class="reveal">
       <div class="section-card">
         <div class="kicker">Contact</div>
-        <h3>Best way to reach me</h3>
+        <h2>Best way to reach me</h2>
         <p>
           Email is easiest. If you prefer LinkedIn, that works too.
         </p>
 
         <div class="contact-row">
           <a class="btn primary" href="mailto:briankendallalexander@outlook.com">briankendallalexander@outlook.com</a>
-          <button class="btn" type="button" id="copyEmail2">Copy email</button>
-          <a class="btn" href="https://www.linkedin.com/in/briankendallalexander/" target="_blank" rel="noopener">Connect on LinkedIn</a>
-          <a class="btn resume" href="Brian_K_Alexander_Resume.pdf" target="_blank" rel="noopener">&#8659; Download Résumé</a>
+          <button class="btn" type="button" id="copyEmail2" aria-label="Copy email address to clipboard">Copy email</button>
+          <a class="btn" href="https://www.linkedin.com/in/briankendallalexander/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+          <a class="btn resume" href="Brian_K_Alexander_Resume.pdf" target="_blank" rel="noopener">&#8659; Download R&eacute;sum&eacute;</a>
         </div>
       </div>
     </section>
 
     <footer>
-      © <span id="year"></span> Brian Alexander. All rights reserved.
+      &copy; <span id="year"></span> Brian Alexander. All rights reserved.
     </footer>
   </main>
 
