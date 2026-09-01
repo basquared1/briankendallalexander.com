@@ -395,10 +395,25 @@
       margin: 8px 0;
     }
 
+    .prose-2{
+      column-count: 2;
+      column-gap: 34px;
+    }
+    .prose-2 p{
+      max-width: none;
+      margin: 0 0 10px;
+      break-inside: avoid;
+    }
+    .prose-2 p:last-child{ margin-bottom: 0; }
+    @media (max-width: 860px){
+      .prose-2{ column-count: 1; }
+      .prose-2 p{ max-width: 58ch; }
+    }
+
     .works{
       display:grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
+      gap: 8px;
       margin: 12px 0 0;
       padding: 0;
       list-style: none;
@@ -410,9 +425,9 @@
       border: 1px solid rgba(0,0,0,0.08);
       border-radius: var(--radius2);
       background: rgba(255,255,255,0.75);
-      padding: 12px 14px;
+      padding: 9px 12px;
       font-size: 14px;
-      line-height: 1.35;
+      line-height: 1.3;
     }
     .works li cite{
       font-style: italic;
@@ -434,6 +449,15 @@
       font-size: 13px;
       color: rgba(11,11,12,0.80);
       line-height: 1.5;
+    }
+
+    .bar-line{
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(11,11,12,0.10);
+      font-size: 15px;
+      color: var(--text);
+      max-width: none;
     }
 
     .contact-row{
@@ -561,7 +585,8 @@
       <div class="section-card">
         <div class="kicker">About</div>
         <h2>Practical counsel, creative-friendly execution.</h2>
-        <p>
+        <div class="prose-2">
+          <p>
           I am an entertainment Business &amp; Legal Affairs attorney with more than 20 years of
           experience in the acquisition, development, production and licensing of film and
           television content.
@@ -577,6 +602,7 @@
           services, licensing and distribution agreements and independently handle production
           legal and clearance matters throughout the life of a project.
         </p>
+        </div>
       </div>
     </section>
 
@@ -585,7 +611,8 @@
       <div class="section-card">
         <div class="kicker">How I work</div>
         <h2>Practical, collaborative and production-minded.</h2>
-        <p>
+        <div class="prose-2">
+          <p>
           I keep negotiations focused on the business points that matter, with terms that are
           clear, defensible and workable in production.
         </p>
@@ -594,6 +621,7 @@
           interests while recognizing that a successful deal should also preserve the creative and
           business relationships needed to make the project.
         </p>
+        </div>
       </div>
     </section>
 
@@ -669,14 +697,9 @@
           <li><cite>Bob Marley Animated Feature</cite><span class="plat">Disney</span></li>
         </ul>
 
-        <h3 class="kicker" style="margin-top: 20px; margin-bottom: 0;">Podcasts</h3>
-        <ul class="works">
-          <li><cite>Ali in Me</cite><span class="plat">Audible</span></li>
-          <li><cite>Queer the Music: Jake Shears</cite><span class="plat">Mercury Studios</span></li>
-          <li><cite>Jacked</cite><span class="plat">Wondery</span></li>
-        </ul>
-
-        <p style="margin-top: 18px;">
+        
+        <div class="prose-2">
+          <p style="margin-top: 18px;">
           Projects produced during my tenure received Emmy Awards and nominations, a Peabody Award
           for <cite>STAX: Soulsville U.S.A.</cite>, the Sundance Audience Award for
           <cite>Selena y Los Dinos</cite>, and selection of <cite>The Velvet Underground</cite> for
@@ -687,6 +710,7 @@
           structuring transactions, securing rights, resolving production issues and helping
           creative, business and corporate teams move projects from concept to release.
         </p>
+        </div>
       </div>
     </section>
 
@@ -732,8 +756,8 @@
           <li><strong>Juris Doctor (J.D.), with Honors</strong> &mdash; Florida State University College of Law &middot; Editor, Journal of Land Use and Environmental Law</li>
           <li><strong>Bachelor of Arts (B.A.), English Literature</strong> &mdash; Florida State University</li>
         </ul>
-        <p style="margin-top: 12px; color: var(--muted); font-size: 13px;">
-          California State Bar &mdash; Active Member
+        <p class="bar-line">
+          <strong>California State Bar</strong> &mdash; Active Member
         </p>
       </div>
     </section>
